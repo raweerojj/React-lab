@@ -8,6 +8,6 @@ export default class WordCard extends Component {
                     Array.from(this.props.value).map((c, i) => <CharacterCard value={c} key={i}/>)
                 }
             </div>
-        );
+        )
     }
 }
