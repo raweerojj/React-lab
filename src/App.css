@@ -46,6 +46,11 @@
   background: lightgreen;
   box-shadow: 0 4px 8px 0 rgba(0,150,0,1);
 }
+.again{
+  color: black;
+  background: red;
+  box-shadow: 0 4px 8px 0 rgba(0,150,0,1);
+}
 .status{
   display: inline-block;
   text-align: center;

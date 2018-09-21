@@ -22,6 +22,7 @@ export default class WordCard extends Component {
         
     }
     render(){
+        let className = `status ${this.state.completed ? 'again': ''}`
         return(
             <div className="App">
                 {
@@ -30,7 +31,7 @@ export default class WordCard extends Component {
                         activationHandler = {this.activationHandler}/>
                     )
                 }
-                <dir className="status">
+                <dir className={className}>
                     <p>Status</p>
                     <p>Round : {this.state.attempt}</p>
                     <p>{this.state.completed? "you win" : ""}</p>
