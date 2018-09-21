@@ -9,6 +9,7 @@ export default class WordCard extends Component {
     }
     activationHandler = (c) => { 
         console.log(`${c} has been activated.`)
+        // console.log(`${c} has been cancelled.`)
         let guess = [this.state.guess]+c
         this.setState({guess})
         if(guess.length === this.state.chars.length){
