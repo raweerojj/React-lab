@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CharacterCard from './CharacterCard';
+import Diamond from './thanks.jpg';
 import _ from 'lodash';
 
 export default class WordCard extends Component {
@@ -36,9 +37,11 @@ export default class WordCard extends Component {
                     <h3>{this.state.completed? "" : "Press correctly."}</h3>
                     <p>Round : {this.state.attempt}</p>
                     <p>{this.state.completed? "you win" : ""}</p>
-                    <p>{this.state.completed? "BNK48 : Koisuru fortune cookie" : ""}</p>
+                    <p>{this.state.completed? "BNK48 : Koisuru fortune cookie" : ""}</p>                    
                 </dir>
+                {this.state.completed? <img src={Diamond} /> : ""}
             </div>
+            
             
         )
     }
