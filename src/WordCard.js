@@ -32,7 +32,8 @@ export default class WordCard extends Component {
                     )
                 }
                 <dir className={className}>
-                    <p>Status: what is this?</p>
+                    <h1>{this.state.completed? "" : "You want to know what is behide?"}</h1>
+                    <h3>{this.state.completed? "" : "Press correctly."}</h3>
                     <p>Round : {this.state.attempt}</p>
                     <p>{this.state.completed? "you win" : ""}</p>
                 </dir>
