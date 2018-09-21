@@ -9,11 +9,9 @@ export default class WordCard extends Component {
     }
     activationHandler = c => { console.log(`${c} has been activated.`)}
     activationHandler = (c) => { 
-        //console.log(`${c} has been activated.`)
         let guess = [this.state.guess]+c
         this.setState({guess})
         if(guess.length === this.state.chars.length){
-            // if(guess.join('').toString() === this.state.word){
             if(guess === this.state.word){
                 this.setState({guess: [], completed: true})
             }else{
@@ -26,12 +24,10 @@ export default class WordCard extends Component {
             <div className="App">
                 {
                     Array.from(this.state.chars).map(
-                        (c, i) => <CharacterCard value = {c} key = {i} attemt={this.state.attemt}
+                        (c, i) => <CharacterCard value = {c} key = {i} attempt={this.state.attempt}
                         activationHandler = {this.activationHandler}/>
                     )
                 }
-                <p>Round : {this.state.attempt}</p>
-                <p>{this.state.completed? "you win" : ""}</p>
             </div>
         )
     }
