@@ -12,6 +12,10 @@ export default class CharacterCard extends Component {
             this.props.activationHandler(this.props.value)
             this.setState({active: true})
         }
+        else if(this.state.active){
+            this.props.activationHandler(this.props.value)
+            this.setState({active: false})
+        }
     }
 
     componentDidUpdate(prevProps){
